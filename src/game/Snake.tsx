@@ -2,29 +2,23 @@ import * as React from "react";
 import {
   CONSTANTS,
   Velocity,
-  initialGameState,
   startGame,
   DifficultyMultiplier
 } from "./Game";
+
+const velocityByKeyCode: {[key: number]: Velocity} = {
+  37: { x: -1, y: 0 },
+  38: { x: 0, y: -1 },
+  39: { x: 1, y: 0 },
+  40: { x: 0, y: 1 },
+}
 
 const handleKeyDown = (
   setVelocity: (velocity: Velocity) => void,
   { keyCode }: React.KeyboardEvent<HTMLDivElement>
 ) => {
-  debugger;
-  switch (keyCode) {
-    case 37:
-      setVelocity({ x: -1, y: 0 });
-      break;
-    case 38:
-      setVelocity({ x: 0, y: -1 });
-      break;
-    case 39:
-      setVelocity({ x: 1, y: 0 });
-      break;
-    case 40:
-      setVelocity({ x: 0, y: 1 });
-      break;
+  if (velocityByKeyCode[keyCode]) {
+    setVelocity(velocityByKeyCode[keyCode]);
   }
 };
 

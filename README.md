@@ -1,2 +1,1 @@
-# react-snake
-Created with CodeSandbox
+[https://jhawins.github.io/react-snake/](https://jhawins.github.io/react-snake/)

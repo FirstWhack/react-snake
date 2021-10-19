@@ -131,9 +131,9 @@ export const startGame = (
         trail:
           JSON.stringify(trail[trail.length - 1]) !==
           JSON.stringify(newPlayerPosition)
-            ? (trail
+            ? trail
                 .concat(newPlayerPosition)
-                .slice(-newTailSize) as GameState["trail"])
+                .slice(-newTailSize)
             : trail,
         applePosition: isOnApple
           ? {
