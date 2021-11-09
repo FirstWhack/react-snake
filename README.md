@@ -1,1 +1,1 @@
-[https://jhawins.github.io/react-snake/](https://jhawins.github.io/react-snake/)
+[https://FirstWhack.github.io/react-snake/](https://FirstWhack.github.io/react-snake/)
